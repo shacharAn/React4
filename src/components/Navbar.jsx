@@ -1,46 +1,27 @@
 import { NavLink } from "react-router-dom";
 
-export default function Navbar() {
+const navStyle = ({ isActive }) => ({
+    color: isActive ? "red" : "black",
+    fontWeight: isActive ? "bold" : "normal",
+    marginLeft: "12px",
+    textDecoration: "none",
+    });
+
+    export default function Navbar() {
     return (
         <header className="navbar">
         <nav className="navbar-inner">
-            
-            <NavLink
-            to="/"
-            style={({ isActive }) => ({
-                color: isActive ? "red" : "black",
-                fontWeight: isActive ? "bold" : "normal",
-                marginLeft: "12px",
-                textDecoration: "none"
-            })}
-            >
+            <NavLink to="/" end style={navStyle}>
             דף הבית
             </NavLink>
-            
-            <NavLink
-            to="/about"
-            style={({ isActive }) => ({
-                color: isActive ? "red" : "black",
-                fontWeight: isActive ? "bold" : "normal",
-                marginLeft: "12px",
-                textDecoration: "none"
-            })}
-            >
+
+            <NavLink to="/about" style={navStyle}>
             אודות
             </NavLink>
 
-            <NavLink
-            to="/characters"
-            style={({ isActive }) => ({
-                color: isActive ? "red" : "black",
-                fontWeight: isActive ? "bold" : "normal",
-                marginLeft: "12px",
-                textDecoration: "none"
-            })}
-            >
+            <NavLink to="/characters" style={navStyle}>
             דמויות
             </NavLink>
-            
         </nav>
         </header>
     );

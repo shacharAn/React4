@@ -12,7 +12,7 @@ export default function CharacterDetails() {
         <section className="card">
             <h1 className="page-title">דמות לא נמצאה</h1>
 
-            <div className="notfound-actions">
+            <div>
             <Link className="nav-back-btn" to="/characters">
                 חזרה לרשימת הדמויות
             </Link>
@@ -37,8 +37,8 @@ export default function CharacterDetails() {
             </p>
         </div>
 
-        <div className="notfound-actions">
-            <Link to="/characters">
+        <div>
+            <Link className="nav-back-btn" to="/characters">
             חזרה לרשימת הדמויות
             </Link>
         </div>
